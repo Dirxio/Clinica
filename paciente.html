@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Paciente</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Paciente</h1>
+        <a href="index.html" class="back-btn">Volver</a>
+    </header>
+    <main>
+        <form id="formPaciente">
+            <!-- Campos existentes -->
+            <input type="text" id="nombrePaciente" placeholder="Nombre completo" required>
+            <input type="text" id="enfermedadPaciente" placeholder="Enfermedad o diagnóstico" required>
+
+            <!-- Nuevos campos -->
+            <select id="tipoSangre" required>
+                <option value="">Selecciona tu tipo de sangre</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <input type="number" id="edadPaciente" placeholder="Edad" min="0" max="120" required>
+            <input type="number" id="alturaPaciente" placeholder="Altura (en cm)" min="50" max="250" required>
+            <select id="sexoPaciente" required>
+                <option value="">Selecciona tu sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+        </form>
+        <div id="listaPacientes"></div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
